@@ -1,22 +1,60 @@
-:root {
-  --primary: #ddd;
-  --secondary: #e5d4d4;
-}
+
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--primary);
+  font-size: medium;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 
 * {
   box-sizing: border-box;
+}
+
+.containor{
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftside,.rightside{
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+}
+
+h1{
+  text-align: center;
+
+}
+.heading{
+  display: flex;
+  justify-content: space-around;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.submitbutton{
+  padding: 10px;
+
+}
+ul{
+  border: 1px solid black;
+  padding: 10px;
+  list-style: none;
+}
+
+li{
+  padding: 10px;
+}
+ul li:nth-child(odd){
+  background-color: rgb(212, 209, 209);
+}
+.refeshButton{
+  font-size: 16px;
+padding: 10px 16px;
 }
