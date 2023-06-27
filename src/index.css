@@ -1,5 +1,4 @@
 
-
 html,
 body {
   margin: 0;
@@ -7,54 +6,56 @@ body {
   font-size: medium;
 }
 
-
 * {
   box-sizing: border-box;
 }
 
-.containor{
+.containor {
   display: flex;
   justify-content: space-between;
 }
 
-.leftside,.rightside{
+.leftside,
+.rightside {
   flex: 1;
   background-color: white;
   padding: 20px;
 }
 
-h1{
+h1 {
   text-align: center;
-
 }
-.heading{
+
+.heading {
   display: flex;
   justify-content: space-around;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 }
 
-.submitbutton{
+.submitbutton {
   padding: 10px;
-
 }
-ul{
+
+ul {
   border: 1px solid black;
   padding: 10px;
   list-style: none;
 }
 
-li{
+li {
   padding: 10px;
 }
-ul li:nth-child(odd){
+
+ul li:nth-child(odd) {
   background-color: rgb(212, 209, 209);
 }
-.refeshButton{
+
+.refeshButton {
   font-size: 16px;
-padding: 10px 16px;
+  padding: 10px 16px;
 }
