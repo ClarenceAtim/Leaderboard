@@ -19,7 +19,6 @@ const refreshScores = async () => {
     const data = await response.json();
 
     // Update the score list
-    <p class="error-message"></p>;
     const scoreList = document.querySelector('.scorelist');
     scoreList.innerHTML = '';
 
