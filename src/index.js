@@ -6,12 +6,20 @@ const gameId = 'Af3SPW0U28yG92UyBksL';
 // API URL
 const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
 
+// Function to display error message
+const displayErrorMessage = (message) => {
+  const errorMessage = document.querySelector('.error-message');
+  errorMessage.textContent = message;
+};
+
+// Refresh scores
 const refreshScores = async () => {
   try {
     const response = await fetch(`${apiUrl}/games/${gameId}/scores`);
     const data = await response.json();
 
     // Update the score list
+    <p class="error-message"></p>;
     const scoreList = document.querySelector('.scorelist');
     scoreList.innerHTML = '';
 
@@ -21,7 +29,7 @@ const refreshScores = async () => {
       scoreList.appendChild(listItem);
     });
   } catch (error) {
-    console.error('Error refreshing scores:', error);
+    displayErrorMessage('Error refreshing scores');
   }
 };
 
@@ -35,7 +43,7 @@ const submitScore = async () => {
 
   // Validate input
   if (!player || Number.isNaN(score)) {
-    console.error('Invalid input');
+    displayErrorMessage('Invalid input');
     return;
   }
 
@@ -56,15 +64,15 @@ const submitScore = async () => {
       scoreInput.value = '';
       refreshScores();
     } else {
-      console.error('Failed to submit score');
+      displayErrorMessage('Failed to submit score');
     }
   } catch (error) {
-    console.error('Error submitting score:', error);
+    displayErrorMessage('Error submitting score');
   }
 };
 
 // Refresh button click event
-document.querySelector('.refeshButton').addEventListener('click', () => {
+document.querySelector('.refreshButton').addEventListener('click', () => {
   refreshScores();
 });
 
