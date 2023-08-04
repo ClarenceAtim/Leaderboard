@@ -71,7 +71,7 @@ const submitScore = async () => {
 };
 
 // Refresh button click event
-document.querySelector('.refreshButton').addEventListener('click', () => {
+document.querySelector('.refeshButton').addEventListener('click', () => {
   refreshScores();
 });
 
